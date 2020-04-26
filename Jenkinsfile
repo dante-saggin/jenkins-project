@@ -7,7 +7,7 @@ pipeline {
 					echo "multiline shell works too"
 					ls -ltra
 				'''
-				withAWS(region:'eu-west-2',credentials:'aws-static',) {
+				withAWS(region:'us-west-2',credentials:'aws-static',) {
     				s3Upload(file:'index.html', bucket:'jenkins-dhss-cde', path:'.')
 				}
 			}
